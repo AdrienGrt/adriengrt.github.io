@@ -1,0 +1,317 @@
+body{
+    margin: 0;
+ 
+    background-color: #282a2d;
+    
+    
+}
+.skills-h1{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 45px;
+    margin-top:5px;
+    justify-content: center;
+    align-items: center;
+}
+.nav{
+    background-color: rgb(47, 47, 52);
+    padding-top: 30px;
+    padding-bottom: 5px;
+    box-shadow:0px 14px 27px -3px #707070
+    ;
+}
+
+.left{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    margin-left: 300px;
+    margin-top: 50px;
+}
+.titre-flex{
+    display: flex;
+}
+
+* {
+   
+    box-sizing: border-box;
+    font-family: 'impact', sans-serif;
+  }
+  
+ 
+
+  
+  ::selection {
+    color: rgb(255, 255, 255);
+    background: #6665ee;
+  }
+  
+  /* Bar setups */
+  .skills-bar {
+    margin-top: 50px;
+    padding: 25px 30px;
+    width: 600px;
+    background: rgb(255, 254, 254);
+    box-shadow: 5px 5px 20px rgba(0,0,0,.2);
+    border-radius:10px;
+    margin-left: 40px;
+  }
+  
+  .skills-bar .bar:not(first-child) {
+    margin: 20px 0;
+  }
+  
+  .skills-bar .bar .info {
+    margin-bottom: 5px;
+  }
+  
+  .skills-bar h1 {
+    text-align:center;
+    text-transform: uppercase;
+    text-shadow:
+      0px 2px 3px rgba(0,0,0,.4),
+      0px 4px 13px rgba(0,0,0,.1)
+      ;
+  }
+  
+  .skills-bar .bar .info span {
+    font-weight: 500;
+    font-size:17px;
+    opacity: 0;
+    animation: showText .5s 1s linear forwards;
+  }
+  
+  /* Bar itself */
+  .skills-bar .bar .progress-line {
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin:left;
+    border-radius:10px;
+    box-shadow:inset 0 1px 1px rgba(0,0,0,.5),
+      0 1px rgba(255,255,255,.8);
+    animation:animate 1s cubic-bezier(1,0,.5,1) forwards;
+  }
+  
+  /* Skill's Bar */
+  .bar .progress-line span {
+    height: 100%;
+    position: absolute;
+    border-radius:10px;
+    transform:scaleX(0);
+    transform-origin:left;
+    background: #6665ee;
+    animation: animate 1s 1s cubic-bezier(1,0,.5,1) forwards;
+  }
+  
+  /* Skill's length */
+  .bar .progress-line.html span {
+    width: 90%;
+  }
+  
+  .bar .progress-line.css span {
+    width: 90%;
+  }
+  
+  .bar .progress-line.javascript span {
+    width: 70%;
+  }
+  
+  .bar .progress-line.mysql span {
+    width: 65%;
+  }
+  
+  .bar .progress-line.php span {
+    width: 50%;
+  }
+  
+  /* Background for the percentage numbers */
+  .progress-line span::before {
+    position: absolute;
+    content: '';
+    top: -10px;
+    right: 0;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width:0px;
+    border-right-width:0px;
+    border-top-color:#000;
+    opacity: 0;
+    animation: showText2 .5s 1.5s linear forwards;
+  }
+  
+  /* Percentage numbers */
+  .progress-line span::after{
+    position: absolute;
+    top: -28px;
+    right: 0;
+    font-weight:500;
+    background: #000;
+    color: #fff;
+    padding: 1px 8px;
+    font-size:12px;
+    border-radius:3px;
+    opacity: 0;
+    animation: showText2 .5s 1.5s linear forwards;
+  }
+  
+  .progress-line.html span::after {
+    content: "90%";
+  }
+  
+  .progress-line.css span::after {
+    content: "90%";
+  }
+  
+  .progress-line.javascript span::after {
+    content: "70%";
+  }
+  
+  .progress-line.mysql span::after {
+    content: "65%";
+  }
+  
+  .progress-line.php span::after {
+    content: "50%";
+  }
+  
+  /* Animations */
+  /* Bar's animation */
+  @keyframes animate {
+    100%{
+      transform: scaleX(1);
+    }
+  }
+  
+  /* Skill's name animation */
+  @keyframes showText {
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Percentage number's animation */
+  @keyframes showText2 {
+    100% {
+      opacity: 1;
+    }
+  }
+
+.skill{
+    position: relative;
+    
+    height: 20vh;
+    width: 12vw;
+    z-index: 9999;
+    margin-left:40px;
+    margin-top: 50px;
+    
+}
+.outer{
+    height: 160px;
+    width: 160px;
+   
+   border-radius: 50%;
+   padding: 19px;
+   box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15), -6px -6px 10px -1px rgb(255, 255, 255, 0.7);
+}
+
+.inner{
+    height: 120px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+     -0.5px -0.5px 0px  rgba(255, 255, 255, 1), 0.5px 0.5px 0px  rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+}
+#nombre{
+    font-weight: 600;
+    color: #f0f0f0;
+}
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 21.1px;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: anim 2s linear forwards;
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+@keyframes anim{
+    100% {
+        stroke-dashoffset: 157.5;
+    }
+}
+
+.skill1{
+    position: relative;
+    
+    height: 20vh;
+    width: 12vw;
+    z-index: 99999;
+    margin-left:50px;
+    margin-top: 50px;
+    
+}
+.outer1{
+    height: 160px;
+    width: 160px;
+   
+   border-radius: 50%;
+   padding: 19px;
+   box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15), -6px -6px 10px -1px rgb(255, 255, 255, 0.7);
+}
+
+.inner1{
+    height: 120px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+     -0.5px -0.5px 0px  rgba(255, 255, 255, 1), 0.5px 0.5px 0px  rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+}
+
+.compt-flex{
+    display: flex;
+}
+
+.skill2{
+    position: relative;
+    
+    height: 20vh;
+    width: 12vw;
+    z-index: 99999;
+    margin-left:50px;
+    margin-top: 50px;
+    
+}
+.outer2{
+    height: 160px;
+    width: 160px;
+   
+   border-radius: 50%;
+   padding: 19px;
+   box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15), -6px -6px 10px -1px rgb(255, 255, 255, 0.7);
+}
+
+.inner2{
+    height: 120px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+     -0.5px -0.5px 0px  rgba(255, 255, 255, 1), 0.5px 0.5px 0px  rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+}
